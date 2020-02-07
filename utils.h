@@ -9,7 +9,6 @@
 
 #define MIN_LEN 256
 #define MAX_LEN 2048
-#define PID_INIT 1
 #define INDENT "    "
 
 int8_t *presence_pid;
