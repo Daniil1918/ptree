@@ -23,11 +23,10 @@ int main(void)
     }
 
     presence_pid = (int8_t *)calloc(pid_max, sizeof(int8_t));
-    if (presence_pid == NULL)
-    {
-		perror("Error calloc!");
+    if (presence_pid == NULL) {
+        perror("Error calloc!");
         return -1;
-	}
+    }
 
     dir = opendir("/proc");
 
