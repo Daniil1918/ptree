@@ -1,6 +1,6 @@
 #include "utils.h"
 
-int main(void)
+int main(int argc, char *argv[])
 {
     FILE *fp_pid_max = NULL;
     DIR *dir = NULL;
@@ -8,6 +8,11 @@ int main(void)
     dirent_t *cur_dir = NULL;
     u_int32_t pid_max = 0;
     int8_t pid_max_str[MIN_LEN] = {0};
+
+	if (argc != 1) {
+        perror("Error count of arguments!");
+        return -1;
+    }
 
     if ((fp_pid_max = fopen("/proc/sys/kernel/pid_max", "r")) == NULL) {
         perror("Error opening pid_max file!");
