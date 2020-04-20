@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
     u_int32_t pid_max = 0;
     int8_t pid_max_str[MIN_LEN] = {0};
 
-	if (argc != 1) {
+    if (argc != 1) {
         perror("Error count of arguments!");
         return -1;
     }
